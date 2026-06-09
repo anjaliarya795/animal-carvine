@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Oooh+Baby&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex min-h-screen flex-col;
+    background-color: #050505;
+    /* background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); */
+    /* background-attachment: fixed; */
+    margin:0;
+    overflow-x: hidden;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ff8800;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffaa33;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #1e1e1e;
+  }
+}
+
+.text-shadow {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.swal2-popup {
+  padding: 1.5rem 1rem !important;
+  width: 25em !important;
+  background: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,.6) !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .swal2-popup {
+    padding: 1rem !important;
+  }
+}
+
+.swal2-popup #swal2-title {
+  color: #ffffff;
+}
+
+.swal2-popup .swal2-html-container {
+  @apply my-4 text-lg;
+  color: #a0a0a0;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+}
+
+.swal2-popup .swal2-icon {
+  margin: 0 auto;
+}
+
+.swal2-popup .swal2-actions {
+  column-gap: 0.5rem;
+}
+
+.swal2-popup .swal2-actions button {
+  min-width: 5rem;
+  outline: none !important;
+}
+
+.swal2-popup .swal2-actions .swal2-confirm {
+  background: #ff8800 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+.swal2-popup .swal2-actions .swal2-confirm:hover,
+.swal2-popup .swal2-actions .swal2-confirm:focus {
+  background: #ffaa33 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 16px rgba(255, 136, 0, 0.4) !important;
+}
+
+.swal2-popup .swal2-actions .swal2-cancel {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #333333 !important;
+  border-radius: 6px !important;
+}
+
+.swal2-popup .swal2-actions .swal2-cancel:hover {
+  background: #333333 !important;
+  border-color: #ff8800 !important;
+}
+
+.swal2-popup .swal2-actions .swal2-deny {
+  border-radius: 6px !important;
+}
+
+.aniBtn svg {
+  transition: all 0.1s ease-out 0s;
+  display: block;
+  position: relative;
+  top: 2px;
+  left: -1px;
+  transform: translateZ(0);
+  transition: color 0.2s ease-out 0s, transform 0.2s ease-out 0s;
+}
+.aniBtn svg circle {
+  transform: translate(20%, -15%);
+  transition: all 0.1s ease-out 0s;
+}
+.aniBtn svg path:last-of-type {
+  transform-origin: 0px 0px;
+  transform: scaleX(1.3) skewY(-12deg);
+  opacity: 0;
+  transition: color 0.2s ease-out 0s, transform 0.2s ease-out 0s;
+}
+
+.aniBtn:hover svg path,
+.aniBtn:hover svg circle {
+  opacity: 1;
+  transform: none;
+}

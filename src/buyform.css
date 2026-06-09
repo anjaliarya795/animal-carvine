@@ -1,0 +1,175 @@
+/* Dark Theme with Orange Accents */
+
+/* Card with dark background */
+.glass-chip {
+    background: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  }
+
+  /* token pill buttons - Dark theme with orange */
+  .token-pill {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid #333333;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    transition: all .2s ease;
+    background: #1e1e1e;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .token-pill:hover {
+    background-color: #2a2a2a;
+    border-color: #ff8800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 136, 0, 0.2);
+  }
+  .token-pill--active {
+    background: linear-gradient(135deg, #ff8800 0%, #ff6600 100%);
+    color: #ffffff;
+    border-color: #ff8800;
+    box-shadow: 0 4px 16px rgba(255, 136, 0, 0.4);
+  }
+
+  /* inputs with dark styling */
+  .neumorph-input {
+    display: block;
+    min-height: 56px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    padding: 1rem 1.25rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  .neumorph-input::placeholder {
+    color: #707070;
+    font-weight: 400;
+  }
+  .neumorph-input:focus {
+    border-color: rgba(255, 136, 0, 0.5);
+    background: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .neumorph-input.danger {
+    border-color: rgba(239,68,68,0.7);
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.15);
+  }
+
+  /* primary CTA button - Orange gradient */
+  .btn-primary {
+    position: relative;
+    display: flex;
+    min-height: 56px;
+    min-width: 120px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff8800 0%, #ff6600 100%);
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(255, 136, 0, 0.4);
+    overflow: visible;
+  }
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 136, 0, 0.6);
+  }
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 4px 16px rgba(255, 136, 0, 0.4);
+  }
+  .btn-primary:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* progress shimmer */
+  .progress-shimmer {
+    background: linear-gradient(90deg, rgba(255,136,0,0) 0%, rgba(255,136,0,.5) 50%, rgba(255,136,0,0) 100%);
+    transform: skewX(-20deg);
+    animation: progressShimmer 1.6s linear infinite;
+  }
+
+  /* decorative separators for the price line */
+  .separator-line {
+    position: absolute;
+    top: 50%;
+    width: 15%;
+    height: 1px;
+    background: #333333;
+  }
+  .separator-line.before { left: 0; transform: translateY(-50%); }
+  .separator-line.after { right: 0; transform: translateY(-50%); }
+
+  /* keyframes */
+  @keyframes sheen {
+    0%   { opacity: .3; transform: translateX(-20%) }
+    50%  { opacity: .6; transform: translateX(0%) }
+    100% { opacity: .3; transform: translateX(20%) }
+  }
+  @keyframes progressShimmer {
+    0%   { transform: translateX(-100%) skewX(-20deg); }
+    100% { transform: translateX(300%) skewX(-20deg); }
+  }
+
+  /* Dashboard specific styles */
+  .dashboard-card {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+
+  .dashboard-card:hover {
+    background: rgba(30, 30, 30, 0.8);
+    border-color: rgba(255, 136, 0, 0.3);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Staggered fade-in animation for stat cards */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .stat-card {
+    position: relative;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
